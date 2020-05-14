@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumToIndianString", "NumToIndianString\NumToIndianString.csproj", "{FACFBEAA-4F5D-4D32-A456-371FCCE52488}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumToIndianStringTest", "NumToIndianStringTest\NumToIndianStringTest.csproj", "{09AE62E8-7A15-441E-88AC-4643F41399FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FACFBEAA-4F5D-4D32-A456-371FCCE52488}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FACFBEAA-4F5D-4D32-A456-371FCCE52488}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FACFBEAA-4F5D-4D32-A456-371FCCE52488}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FACFBEAA-4F5D-4D32-A456-371FCCE52488}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09AE62E8-7A15-441E-88AC-4643F41399FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09AE62E8-7A15-441E-88AC-4643F41399FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09AE62E8-7A15-441E-88AC-4643F41399FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09AE62E8-7A15-441E-88AC-4643F41399FB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
