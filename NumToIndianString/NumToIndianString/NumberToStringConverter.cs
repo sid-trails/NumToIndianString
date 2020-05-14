@@ -37,7 +37,18 @@ namespace NumToIndianString
         Eighteen = 18,
         Nineteen = 19
     }
-    
+
+    public enum Tens
+    {
+        Twenty = 2,
+        Thirty = 3,
+        Fourty = 4,
+        Fifty = 5,
+        Sixty = 6,
+        Seventy = 7,
+        Eighty = 8,
+        Ninety = 9,
+    }
     public class NumberToStringConverter
     {
         public PlaceValue GetHighestPlaceValue(string number)
@@ -47,13 +58,32 @@ namespace NumToIndianString
             return (PlaceValue) placeValueInt;
         }
 
+        private string GetTensValue(string number)
+        {
+            int numberInt16 = System.Convert.ToInt16(number);
+            if (numberInt16 < 20)
+            {
+                return getRawValue(numberInt16).ToString();
+            }
+
+            return ((Tens)number.ToCharArray()[0]).ToString() + 
+                   getRawValue(System.Convert.ToInt16(number.ToCharArray()[1])).ToString();
+
+        }
+        
         public string Convert(string number)
         {
-            if (number.Length <= 2 && System.Convert.ToInt16(number) < 20)
+            string numberString = String.Empty;
+            
+            var placeVlaue = GetHighestPlaceValue(number);
+
+            numberString = placeVlaue switch
             {
-               return getRawValue(System.Convert.ToInt16(number)).ToString();
-            }
-            return number;
+                PlaceValue.Digits => getRawValue(System.Convert.ToInt16(number)).ToString(),
+                PlaceValue.Tens => GetTensValue(number),
+                _ => throw new NotSupportedException("Number you have passed is not supported for conversion")
+            };
+            return numberString;
         }
 
         private RawValues getRawValue(int number)
